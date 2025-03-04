@@ -1,0 +1,14 @@
+@use '../../../styles/variables' as var;
+
+.badgeLink {
+	border-width: 3px;
+  border-style: solid;
+	overflow: hidden;
+
+	transition: all 200ms;
+
+	span {
+		font-family: var.$font-heading;
+		font-weight: 700;
+	}
+}

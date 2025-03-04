@@ -1,0 +1,31 @@
+@use '../../../styles/variables' as var;
+
+.filterButton {
+	color: white;
+	align-self: start;
+	&.show > button {
+		background-color: var.$main-font-color !important; 
+	}
+	> button {
+		&:active, &:focus, &:hover {
+			background-color: var.$orange-dark;
+		}
+		background-color: var.$orange !important;
+	}
+}
+
+.categoryButtonContainer {
+	min-height: 40vh;
+
+	h2 {
+		font-size: 5rem;
+		font-weight: 700;
+	}
+
+	button {
+		height: fit-content;
+		span {
+			font-size: 1.5rem;
+		}
+	}
+}

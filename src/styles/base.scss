@@ -1,0 +1,65 @@
+@use 'variables' as var;
+@use 'sass:color';
+
+.background-color-main {
+	background: var.$main-color;
+}
+.background-color-black {
+	background: var.$black-ish;
+}
+.background-color-bright {
+	background: var.$orange;
+}
+.background-color-light {
+	background: var.$peachy-lite;
+}
+.background-color-dark {
+	background: var.$orange-dark;
+}
+.background-color-accent {
+	background: var.$accent-color;
+}
+.background-color-accent-2 {
+	background: var.$accent-color-2;
+}
+
+.background-color-peachy-light {
+  background: color.scale(var.$peachy-lite, $lightness: 30%);
+}
+.background-color-blue-light {
+  background: color.scale(var.$blue-lite, $lightness: 60%);
+}
+
+
+.text-color-main {
+	color: var.$main-color;
+}
+.text-color-black {
+	color: var.$black-ish;
+}
+.text-color-bright {
+	color: var.$orange;
+}
+.text-color-light {
+	color: var.$peachy-lite;
+}
+.text-color-dark {
+	color: var.$orange-dark;
+}
+.text-color-accent {
+	color: var.$accent-color;
+}
+.text-color-accent-light {
+	color: color.scale(var.$accent-color, $lightness: 30%);
+}
+
+.text-title {
+	font-family: var.$font-heading;
+	font-weight: 700;
+	font-size: 5rem;
+	line-height: 5rem;
+}
+
+.h-section {
+	min-height: var.$section-height;
+}

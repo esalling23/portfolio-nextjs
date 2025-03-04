@@ -1,0 +1,27 @@
+@use '../../../styles/variables.scss' as var;
+
+.pill {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+	height: 3rem;
+
+	&:hover {
+		cursor: default;
+	}
+}
+
+button.groupButton {
+	border-radius: 0px;
+	border: 3px;
+	box-shadow: none;
+
+  &:hover, &:focus, &.isActive {
+    background: var.$accent-color-2;
+    color: white;
+    border: none;
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,16 @@
+@use '../../../styles/variables' as var;
+
+.sectionContainer {
+	scroll-margin-top: var.$navbar-height;
+	min-height: 80vh;
+  height: fit-content;
+	flex: 1 1 auto;
+}
+
+.sectionBox {
+	min-height: 60vh;
+	
+	.content {
+		opacity: 0;
+	}
+}

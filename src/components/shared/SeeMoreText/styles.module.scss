@@ -1,0 +1,14 @@
+@use '../../../styles/variables' as var;
+
+.seeMoreTextButton {
+	background: transparent;
+	color: var.$main-font-color;
+	border: none;
+	padding: 0;
+	width: fit-content;
+	
+	&:hover, &:focus, &:active {
+		color: var.$main-font-color;
+		text-decoration: underline;
+	}
+}

@@ -1,0 +1,22 @@
+@use '../../../styles/variables' as var;
+
+.button {
+	padding: 0.4em 0.8em;
+	background: var.$main-font-color;
+
+	* {
+		color: white;
+	}
+
+	a {
+		font-size: 1.25em;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&:hover, &:hover * {
+			color: var.$main-color;
+			text-decoration: none;
+		}
+	}
+}

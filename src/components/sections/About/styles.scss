@@ -1,0 +1,43 @@
+@use '../../../styles/variables' as var;
+
+.aboutImg {
+	object-fit: cover;
+	object-position: center;
+	max-height: 90%;
+	height: 90%;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.aboutDescription {
+	font-size: 1rem;
+}
+
+.badge {
+	height: 2.5rem;
+	min-width: 50px;
+  color: var.$black-ish;
+  border-color: var.$black-ish;
+
+	&:focus, &:hover, &.isActive {
+		color: var.$orange-dark; 
+		text-decoration: none;
+		border-color: var.$orange-dark;
+		
+		transition: all 200ms;
+	}
+
+	&.isActive:hover {
+		color: var.$orange;
+		border: 3px solid var.$orange;
+	}
+
+  span {
+		font-size: 2rem;
+  }
+
+	svg {
+		height: 40px;
+		min-width: 40px;
+	}
+}

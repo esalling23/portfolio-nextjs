@@ -1,0 +1,36 @@
+@use '../../../styles/variables' as var;
+
+header {
+	z-index: 1000;
+	font-size: 2rem;
+	font-weight: 700;
+	height: var.$navbar-height;
+	text-decoration: none;
+	
+	nav {
+		min-width: fit-content;
+		max-width: 100%;
+		justify-content: space-evenly;
+
+    a {
+      color: var.$link-color;
+      transition: color 200ms;
+      border: 0;
+
+      &:hover, &:focus, &:focus-visible {
+        color: var.$link-hover;
+        border: 0;
+        outline: 0;
+        transition: color 200ms;
+      }
+
+      &.selected {
+        border-bottom: 3px solid var.$link-hover;
+        transition: border-color 200ms;
+        color: var.$link-hover;
+        transition: color 200ms;
+      }
+    }
+	}
+}
+
