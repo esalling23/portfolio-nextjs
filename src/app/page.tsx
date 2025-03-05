@@ -9,14 +9,19 @@ import HomeSection from '@/components/sections/Home/index';
 import SkillsInterface from '@/components/shared/SkillsInterface';
 import SectionContainer from '@/components/shared/SectionContainer';
 
-import { getCategories, getContent, getProjects, getTools } from '@/lib/api'
+import {
+  // getCategories,
+  getContent,
+  getProjects,
+  getTools
+} from '@/lib/api'
 
 export const revalidate = 3600 * 24;
 
 const App = async () => {
   const content = (await (await getContent()).json()).content;
   const tools = (await (await getTools()).json()).tools;
-  const categories = (await (await getCategories()).json()).categories
+  // const categories = (await (await getCategories()).json()).categories
   const projects = (await (await getProjects()).json()).projects
 
 	const page = (
@@ -32,7 +37,10 @@ const App = async () => {
       <SectionContainer id="skills">
         <SkillsInterface items={tools || []} />
       </SectionContainer>
-      <Portfolio projects={projects} categories={categories} />
+      <Portfolio 
+        projects={projects} 
+        // categories={categories} 
+      />
     </SinglePageLayout>
   )
 	

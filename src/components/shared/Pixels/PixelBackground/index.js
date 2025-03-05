@@ -15,7 +15,7 @@ const PixelBackground = ({
 	const [completedAnimCount, setCompletedAnimCount] = useState(0);
 
 	const [ width, height ] = useWindowSize();
-	const blockSize = useMemo(() => innerWidth * 0.05, [width]);
+	const blockSize = useMemo(() => width * 0.05, [width]);
 	const blockCount = useMemo(() => Math.ceil(height / blockSize), [height, blockSize]);
 
 	useEffect(() => {

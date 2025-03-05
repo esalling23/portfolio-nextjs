@@ -1,30 +1,33 @@
 'use client'
-import React, { useState, useRef, useMemo, useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import Project from '@/components/shared/Project';
 import SectionContainer from '@/components/shared/SectionContainer';
 
-const asterisk = '*';
+// const asterisk = '*';
 
-const Portfolio = ({ projects, categories }) => {
-	const isotope = useRef(null);
-	const [filterKey, setFilterKey] = useState(asterisk);
+const Portfolio = ({ 
+  projects, 
+  // categories
+}) => {
+	// const isotope = useRef(null);
+	// const [filterKey, setFilterKey] = useState(asterisk);
 
-	const handleFilterKeyChange = key => {
-		setFilterKey(curr => {
-			if (key === asterisk) return asterisk;
-			let keys = curr.split('.');
-			if (curr === asterisk) keys = [];
-			if (keys.includes(key)) {
-				keys = keys.filter(k => k !== key);
-			} else {
-				keys.push(key);
-			}
-			return keys.length === 0 ? asterisk : keys.join('.');
-		});
-	};
+	// const handleFilterKeyChange = key => {
+	// 	setFilterKey(curr => {
+	// 		if (key === asterisk) return asterisk;
+	// 		let keys = curr.split('.');
+	// 		if (curr === asterisk) keys = [];
+	// 		if (keys.includes(key)) {
+	// 			keys = keys.filter(k => k !== key);
+	// 		} else {
+	// 			keys.push(key);
+	// 		}
+	// 		return keys.length === 0 ? asterisk : keys.join('.');
+	// 	});
+	// };
 
 	const projectList = projects?.map((project, i) => (
 		<Project

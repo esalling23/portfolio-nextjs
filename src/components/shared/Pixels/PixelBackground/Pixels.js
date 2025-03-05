@@ -57,7 +57,7 @@ const Pixels = ({
 				onAnimationComplete={onBlockAnimComplete}
 			></motion.div>;
 		});
-	}, [blockCount]);
+	}, [blockCount, onBlockAnimComplete, startVisible]);
 
 	const getPixels = useCallback(() => [...new Array(pixelCount)].map((_p, i) => {
 		return (

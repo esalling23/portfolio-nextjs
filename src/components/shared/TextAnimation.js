@@ -4,7 +4,10 @@ import PropTypes from 'prop-types';
 
 // console.log({ Typewriter })
 
-const TextAnimation = ({ textArray, isRepeating = true }) => {
+const TextAnimation = ({ 
+  // textArray, 
+  // isRepeating = true
+}) => {
   return <></>
 	// return <Typewriter
   //   onInit={() => {}}

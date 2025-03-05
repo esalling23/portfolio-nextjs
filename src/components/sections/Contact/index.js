@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FaGithub, FaLinkedin, FaFileAlt } from 'react-icons/fa';
+import { FaFileAlt } from 'react-icons/fa';
 import classNames from 'classnames';
 import Image from 'next/image';
 

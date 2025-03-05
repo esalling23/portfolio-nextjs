@@ -23,7 +23,7 @@ const SeeMoreText = ({
 
 	useEffect(() => {
 		onToggle();
-	}, [seenText]);
+	}, [onToggle]);
 
 	return (
 		<>

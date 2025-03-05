@@ -68,7 +68,7 @@ const DotDotDotAnim = ({
 			
 			exitAnimation();
 		}
-	}, [shouldAnimate]);
+	}, [shouldAnimate, animateContainer, containerScope, handleAnimExited]);
 	
 	useEffect(() => {
 		if (blocksReady && shouldAnimate) {
@@ -85,7 +85,7 @@ const DotDotDotAnim = ({
 		} else {
 			setShouldRepeat(false);
 		}
-	}, [shouldAnimate, blocksReady, shouldRepeat]);
+	}, [shouldAnimate, blocksReady, shouldRepeat, handleAnimComplete]);
 
 	const blocks = [1, 2, 3].map((n) => (
 		<div
