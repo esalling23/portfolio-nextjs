@@ -16,9 +16,9 @@ import {
   getTools
 } from '@/lib/api'
 
-export const revalidate = 3600 * 24;
+// export const revalidate = 3600 * 24;
 
-const App = async () => {
+async function App () {
   const content = (await (await getContent()).json()).content;
   const tools = (await (await getTools()).json()).tools;
   // const categories = (await (await getCategories()).json()).categories
@@ -52,3 +52,6 @@ const App = async () => {
 };
 
 export default App;
+export const config = {
+  revalidate: 86400 // 3600 * 24
+}
