@@ -69,24 +69,18 @@ const Project = ({
         <div 
           className={`flex justify-center absolute w-full h-full z-1 ${isHover && 'invisible'}`}
         >
-          {/* <div className="relative w-full h-full"> */}
-            <Image
-              ref={imageRef}
-              src={mainImg}
-              alt="Main project image"
-              style={{
-                objectFit: 'cover',
-              //   sizes: '100vh',
-              //   layout: 'fill'
-              }}
-              fill
-              // layout="fill"
-              objectFit="cover"
-              sizes="100vh"
-              onLoad={handleContentLoaded}
-              className="rounded-md"
-            />
-          {/* </div> */}
+          <Image
+            ref={imageRef}
+            src={mainImg}
+            alt="Main project image"
+            style={{
+              objectFit: 'cover'
+            }}
+            fill
+            sizes="100vh"
+            onLoad={handleContentLoaded}
+            className="rounded-md"
+          />
         </div>
       </Card>
     </div>
