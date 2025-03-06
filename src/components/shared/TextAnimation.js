@@ -1,23 +1,25 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import PropTypes from 'prop-types';
-// import Typewriter from 'typewriter-effect';
-
-// console.log({ Typewriter })
+import AnimatedText from './AnimatedText';
 
 const TextAnimation = ({ 
-  // textArray, 
-  // isRepeating = true
+  textArray, 
 }) => {
-  return <></>
-	// return <Typewriter
-  //   onInit={() => {}}
-	// 	options={{
-	// 		strings: textArray,
-	// 		autoStart: true,
-	// 		loop: isRepeating,
-	// 		skipAddStyles: true
-	// 	}}
-	// />;
+  const [wordIndex, setWordIndex] = useState(0)
+  const onComplete = useCallback(() => {
+    setWordIndex(curr => {
+      if (curr + 1 < textArray.length) {
+        return curr + 1
+      }
+      return 0
+    })
+  }, [textArray])
+  return <>
+    <AnimatedText 
+      text={textArray[wordIndex]}
+      onComplete={onComplete}
+    />
+  </>
 };
 
 TextAnimation.propTypes = {
