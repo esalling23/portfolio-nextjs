@@ -1,4 +1,5 @@
-import React from 'react';
+'use client'
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
@@ -10,8 +11,8 @@ import styles from './styles.module.scss';
 
 const HomeSection = ({
 	typewriterTexts = [],
-	isTyping = true,
 }) => {
+  const [isTyping, setIsTyping] = useState(false)
 	return (
 		<SectionContainer id="home">
 			<SectionBox className={classNames(
@@ -24,7 +25,10 @@ const HomeSection = ({
 					<span className="text-color-dark">Eron Salling</span>
 				</div>
 			</SectionBox>
-			<SectionBox className="text-color-light justify-center">
+			<SectionBox  
+        className="text-color-light justify-center"
+        onEnter={() => setIsTyping(true)}
+      >
 				<div className={classNames(
 					'flex flex-col background-color-black', 
 					styles.terminal
@@ -37,8 +41,7 @@ const HomeSection = ({
 						styles.typewriter
 					)}>
 						<span className="pr-3">{'%'}</span>
-						{typewriterTexts?.length > 0
-							&& isTyping
+						{isTyping
 							&& <TextAnimation textArray={typewriterTexts}/>}
 					</div>
 				</div>
