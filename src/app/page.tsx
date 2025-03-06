@@ -16,8 +16,6 @@ import {
   getTools
 } from '@/lib/api'
 
-// export const revalidate = 3600 * 24;
-
 async function App () {
   const content = (await (await getContent()).json()).content;
   const tools = (await (await getTools()).json()).tools;
