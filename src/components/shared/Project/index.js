@@ -63,7 +63,7 @@ const Project = ({
           <div className="w-full mt-3 seeMoreLink">
             {/* <p>{description}</p> */}
             {moreLink && <BadgeLink url={moreLink} className="pl-2 seeMoreLink" text={'View Live'} icon={FaLink} />}
-            {gitLink && <BadgeLink url={moreLink} className="pl-2 seeMoreLink" text={'View Github'} icon={FaGithub} />}
+            {gitLink && <BadgeLink url={gitLink} className="pl-2 seeMoreLink" text={'View Github'} icon={FaGithub} />}
           </div>
         </div>
         <div 
@@ -80,6 +80,7 @@ const Project = ({
             sizes="100vh"
             onLoad={handleContentLoaded}
             className="rounded-md"
+            loading="eager"
           />
         </div>
       </Card>
