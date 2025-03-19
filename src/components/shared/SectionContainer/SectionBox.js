@@ -25,7 +25,7 @@ const SectionBox = ({
       onAnimationComplete={onEnter}
 			whileInView={{ opacity: 1, transition: { duration: 0.5, ease: 'easeInOut' } }}
 			viewport={{ once: true, amount: .25 }}
-			className={classNames(styles.content, 'flex flex-col')}
+			className={classNames(styles.content, 'flex flex-col justify-center')}
 		>
 			{children || ''}
 		</motion.div>
