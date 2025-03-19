@@ -6,7 +6,7 @@ import BadgeLink from '../Badge/BadgeLink';
 function Footer ({
 
 }) {
-  const badgeClasses = 'text-white border-white hover:text-black focus:text-black hover:border-black focus:border-black aspect-square'
+  const badgeClasses = 'text-black border-black hover:text-white focus:text-white hover:border-white focus:border-white aspect-square'
 	return (
 		<footer className="w-full h-24 flex flex-row gap-4 justify-center content-center items-center background-color-accent-2">
       <BadgeLink
