@@ -19,7 +19,7 @@ const defaultAnimations = {
   hide: {
     opacity: 0,
     transition: {
-      duration: 0.5,
+      duration: 0.1,
       delay: 1.5, 
       staggerChildren: 0
     }
@@ -27,11 +27,12 @@ const defaultAnimations = {
   visible: {
     opacity: 1,
     transition: {
-      duration: 0.1,
-      staggerChildren: 0.1
+      duration: 0
     }
   }
 }
+
+const STAGGER = 0.15
 
 const AnimatedText = ({
   text, 
@@ -75,7 +76,7 @@ const AnimatedText = ({
       initial="hidden"
       animate={animate}
       transition={{ 
-        staggerChildren: wordPrinted.current ? 0 : 0.1,
+        staggerChildren: wordPrinted.current ? 0 : STAGGER,
       }}
       onAnimationComplete={onAnimComplete}
       aria-hidden
