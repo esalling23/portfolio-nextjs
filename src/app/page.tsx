@@ -28,7 +28,7 @@ async function App () {
         typewriterTexts={content.typewriter_texts}
       />
       <About
-        img={content.about_img}
+        img={content.about_img_safe}
         description={content.about_description}
         resume={content.resume}
       />
