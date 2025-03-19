@@ -40,8 +40,8 @@ const Portfolio = ({
 			description={project.description}
 			moreLink={project.more_link}
 			gitLink={project.git_link}
-			mainImg={project.main_img}
-			thumbnailImg={project.thumbnailImg}
+			mainImg={project.main_img_safe}
+			thumbnailImg={project.thumbnail_img_safe}
 			categories={project.categories}
 			// handleResize={() => isotope.current?.layout()}
 		/>

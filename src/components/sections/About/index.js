@@ -21,6 +21,7 @@ const About = ({
       <Image
         alt="Photo of a smiling person named Eron"
         src={img}
+        loading="eager"
         width={0}
         height={0}
         sizes="100vw"
